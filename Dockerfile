@@ -15,7 +15,8 @@ RUN apt-get update && apt-get install -y cmake \
     tk-dev \
     python2.7-dev \
     python3.5 \
-    python3.5-dev
+    python3.5-dev \
+    python3-pip
 
 # Download Vera++ 1.3.0 sources
 ADD https://bitbucket.org/verateam/vera/downloads/vera++-1.3.0.tar.gz /tmp/vera++-1.3.0.tar.gz
