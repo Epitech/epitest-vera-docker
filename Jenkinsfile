@@ -28,7 +28,7 @@ pipeline {
             steps {
                 ansiColor('xterm') {
                     script {
-                        docker.withRegistry('https://nexus.epitest.eu:9081/', 'docker-registry-login') {
+                        docker.withRegistry('https://nexus.epitest.eu:9081/', 'nexus-epitest-ci') {
                             sh "docker tag epitechcontent/vera:latest nexus.epitest.eu:9081/epitechcontent/vera:latest && docker push nexus.epitest.eu:9081/epitechcontent/vera:latest"
                         }
                         docker.withRegistry('https://index.docker.io/v1/', 'dockerhub-login') {
